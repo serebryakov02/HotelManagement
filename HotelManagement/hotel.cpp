@@ -6,7 +6,7 @@ int CheckOut(int roomno)
 {
     qDebug() << "In CheckOut for room no" << roomno;
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("SQLITE");
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     QString dbPath = "/home/serebryakov/QtProjects2023/February/HotelManagement/"
                      "hotel_management.db";
     db.setDatabaseName(dbPath);
@@ -41,7 +41,7 @@ int Hotel::BookRoom(int roomno, const QString &name, const QString &contact,
 {
     qDebug() << "In BookRoom for room no" << roomno;
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("SQLITE");
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     QString dbPath = "/home/serebryakov/QtProjects2023/February/HotelManagement/"
                      "hotel_management.db";
     db.setDatabaseName(dbPath);
@@ -113,7 +113,7 @@ QVector<int> Hotel::GetRoomList(const QString &flag = "y")
 {
     QVector<int> rooms;
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("SQLITE");
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     QString dbPath = "/home/serebryakov/QtProjects2023/February/HotelManagement/"
                      "hotel_management.db";
     db.setDatabaseName(dbPath);

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "checkavailabilitydialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,5 +27,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    CheckAvailabilityDialog* m_ptrCheckAvailabilityDialog;
 };
 #endif // MAINWINDOW_H

@@ -9,19 +9,28 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bookroomdialog.cpp \
     checkavailabilitydialog.cpp \
+    checkoutdialog.cpp \
     hotel.cpp \
     main.cpp \
     mainwindow.cpp \
+    transaction.cpp
 
 HEADERS += \
+    bookroomdialog.h \
     checkavailabilitydialog.h \
+    checkoutdialog.h \
     hotel.h \
     mainwindow.h \
+    transaction.h
 
 FORMS += \
+    bookroomdialog.ui \
     checkavailabilitydialog.ui \
+    checkoutdialog.ui \
     mainwindow.ui \
+    transaction.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

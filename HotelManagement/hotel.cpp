@@ -2,7 +2,7 @@
 
 Hotel* Hotel::instance = nullptr;
 
-int CheckOut(int roomno)
+int Hotel::CheckOut(int roomno)
 {
     qDebug() << "In CheckOut for room no" << roomno;
 
@@ -25,7 +25,7 @@ int CheckOut(int roomno)
     QString statement = "UPDATE room SET available = :value WHERE number = "
             + QString::number(roomno);
     query.prepare(statement);
-    query.bindValue(":value", 'y');
+    query.bindValue(":value", "y");
     if (!query.exec())
         qDebug() << "Update failed:" << query.lastError() << query.lastQuery();
     else
@@ -62,7 +62,7 @@ int Hotel::BookRoom(int roomno, const QString &name, const QString &contact,
     QString statement = "UPDATE room SET available = :value WHERE number = "
             + QString::number(roomno);
     query.prepare(statement);
-    query.bindValue(":value", 'n');
+    query.bindValue(":value", "n");
     if (!query.exec())
         qDebug() << "Update failed:" << query.lastError() << query.lastQuery();
     else
